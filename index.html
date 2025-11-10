@@ -19,8 +19,13 @@
       display: flex;
       justify-content: center;
       align-items: center;
+
+      /* 🔧 Ajuste principal: mostra a imagem inteira */
       background: url("minha_imagem.jpeg") no-repeat center center fixed;
-      background-size: cover;
+      background-size: contain; /* Mostra toda a imagem */
+      background-color: #000;   /* Cor de fundo nas bordas */
+      background-repeat: no-repeat;
+      background-position: center center;
     }
 
     .overlay {
@@ -30,16 +35,14 @@
       border-radius: 12px;
     }
 
-    /* 🔥 Aumenta o tamanho do título */
     h1 {
-      font-size: 4rem; /* antes era 2.5rem */
+      font-size: 4rem;
       margin-bottom: 15px;
       text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
     }
 
-    /* 🔥 Aumenta o tamanho do cronômetro */
     #timer {
-      font-size: 3rem; /* antes era 1.8rem */
+      font-size: 3rem;
       font-weight: bold;
       color: #00ff00;
       text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
@@ -47,10 +50,10 @@
 
     @media (max-width: 600px) {
       h1 {
-        font-size: 2rem; /* título menor em telas pequenas */
+        font-size: 2rem;
       }
       #timer {
-        font-size: 1.5rem; /* cronômetro menor em telas pequenas */
+        font-size: 1.5rem;
       }
     }
   </style>
